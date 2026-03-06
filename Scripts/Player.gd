@@ -1,0 +1,37 @@
+extends CharacterBody2D
+
+const SPEED := 50.0
+
+# Maps 45° movement sector (0=E, 1=SE, 2=S, 3=SW, 4=W, 5=NW, 6=N, 7=NE) → animation name
+const SECTOR_TO_ANIM := [
+	"walk_right",      # E
+	"walk_right_down", # SE
+	"walk_down",       # S
+	"walk_left_down",  # SW
+	"walk_left",       # W
+	"walk_up_left",    # NW
+	"walk_up",         # N
+	"walk_up_right",   # NE
+]
+
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+
+func _physics_process(_delta: float) -> void:
+	var input := Vector2(
+		Input.get_axis("ui_left", "ui_right"),
+		Input.get_axis("ui_up", "ui_down")
+	)
+
+	if input != Vector2.ZERO:
+		velocity = input.normalized() * SPEED
+		var angle := input.angle()
+		var sector := int(round(angle / (PI / 4.0))) % 8
+		if sector < 0:
+			sector += 8
+		sprite.play(SECTOR_TO_ANIM[sector])
+	else:
+		velocity = Vector2.ZERO
+		sprite.play("default")
+
+	move_and_slide()
