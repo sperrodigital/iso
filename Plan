@@ -1,0 +1,39 @@
+IsoScape
+
+Systems:
+- Inventory
+- Farming
+  - Need hoe
+  - Till Land
+  - Plant Seed
+  - Water Crop
+    - if not too complex, add automated watering (rain catcher or irrigation)
+  - Harvest Crop
+
+- Day/Night Cycle
+  - Crops affected and grow at day
+  - 5 min Day / 2 min Night
+- Weather
+  - Rain / Sunny / Storm
+
+
+Plans:
+- Pick Ups
+  - stone
+  - wood
+  - cloth
+  - berries
+- Inventory
+- Crafting
+
+
+
+Polish:
+- Animate Player Idle
+- Make brush idle animation
+
+
+
+Done:
+- Map
+- Player

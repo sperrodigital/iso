@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bqw7fshvtdbs5"]
+
+[ext_resource type="Script" uid="uid://drupcdaf2l8x0" path="res://Scenes/wood.gd" id="1_quj7p"]
+[ext_resource type="Texture2D" uid="uid://bmekpoed1l3n" path="res://Tileset/spritesheet.png" id="2_ecwbw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yuu5d"]
+radius = 6.0
+
+[node name="Stone_Pickup" type="Area2D" unique_id=810082117]
+z_index = 1
+script = ExtResource("1_quj7p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997522513]
+position = Vector2(0, -6)
+scale = Vector2(0.5331197, 0.5331197)
+texture = ExtResource("2_ecwbw")
+region_enabled = true
+region_rect = Rect2(33.774124, 197.86923, 28.387108, 27.518097)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314670738]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_yuu5d")

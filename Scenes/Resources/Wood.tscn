@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cnxf7fi2l8i54"]
+
+[ext_resource type="Texture2D" uid="uid://bmekpoed1l3n" path="res://Tileset/spritesheet.png" id="1_iqlcu"]
+[ext_resource type="Script" uid="uid://drupcdaf2l8x0" path="res://Scenes/wood.gd" id="1_yuu5d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yuu5d"]
+radius = 7.0
+
+[node name="Wood_Pickup" type="Area2D" unique_id=810082117]
+script = ExtResource("1_yuu5d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997522513]
+position = Vector2(2.842171e-14, -0.99999994)
+scale = Vector2(0.5769231, 0.5769231)
+texture = ExtResource("1_iqlcu")
+region_enabled = true
+region_rect = Rect2(130.05118, 134.10732, 30.674637, 26.755844)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314670738]
+shape = SubResource("CircleShape2D_yuu5d")
