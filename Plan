@@ -1,9 +1,11 @@
 IsoScape
 
 Systems:
+---------
 - Inventory
+
 - Farming
-  - Need hoe
+  - Required Farming tool
   - Till Land
   - Plant Seed
   - Water Crop
@@ -13,22 +15,34 @@ Systems:
 - Day/Night Cycle
   - Crops affected and grow at day
   - 5 min Day / 2 min Night
+
 - Weather
   - Rain / Sunny / Storm
 
 
-Plans:
+Ideas
+---------
+- Lighting
+  - Night time, should be hard to see?
+
 - Pick Ups
   - stone
   - wood
   - cloth
   - berries
-- Inventory
-- Crafting
 
+- Inventory
+  -
+
+- Crafting
+  - Crafting Table
+
+- Animals
+  - Tame and ride animals to go faster
 
 
 Polish:
+---------
 - Animate Player Idle
 - Make brush idle animation
 
