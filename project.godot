@@ -15,10 +15,15 @@ run/main_scene="uid://b5hg2gkg1a2n3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+BackgroundMusic="*uid://cgo3ur6h8v6l3"
+
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"

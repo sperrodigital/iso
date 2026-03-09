@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cgo3ur6h8v6l3"]
+
+[ext_resource type="AudioStream" uid="uid://c0r7nimqmv3xe" path="res://Assets/Music/Wondrous-waters.mp3" id="1_46iy7"]
+[ext_resource type="AudioStream" uid="uid://cau77xmclk2ic" path="res://Assets/Music/birds-chirping.mp3" id="2_dtk78"]
+
+[node name="BackgroundMusic" type="Node2D" unique_id=2094942708]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=865615811]
+stream = ExtResource("1_46iy7")
+volume_db = -9.123
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1637270804]
+stream = ExtResource("2_dtk78")
+volume_db = -20.845
+autoplay = true
+parameters/looping = true

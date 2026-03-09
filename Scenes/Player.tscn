@@ -237,9 +237,9 @@ script = ExtResource("2_player")
 shape = SubResource("CapsuleShape2D_player")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1262465778]
-position = Vector2(0, -10)
+position = Vector2(5.9604645e-08, -9)
+scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_8flut")
 animation = &"walk_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=960084169]
-zoom = Vector2(1.5, 1.5)
