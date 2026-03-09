@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cnxf7fi2l8i54" path="res://Scenes/Resources/Wood.tscn" id="3_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://bqw7fshvtdbs5" path="res://Scenes/Resources/Stone.tscn" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dgajwms7a8jy4" path="res://Scenes/Animals/Deer/Deer.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://du1w661p5cvks" path="res://Scenes/UI.tscn" id="6_ui"]
+[ext_resource type="PackedScene" uid="uid://cgo3ur6h8v6l3" path="res://Scenes/Audio/Background_Music.tscn" id="7_o06y3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go701"]
 texture = ExtResource("1_a02cp")
@@ -95,7 +97,7 @@ texture_region_size = Vector2i(32, 32)
 7:5/0 = 0
 7:5/0/texture_origin = Vector2i(0, 8)
 8:5/0 = 0
-8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 0, 8, 16, 0, 0, -8)
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.547003, -8.992936, -16.007427, -7.01449, -0.8992939, 0.5395775, 15.827568, -7.3742075, 15.108131, -10.431806, 0.8992939, -16.90672)
 9:5/0 = 0
 9:5/0/texture_origin = Vector2i(0, 8)
 10:5/0 = 0
@@ -217,3 +219,16 @@ position = Vector2(209, 177)
 
 [node name="Deer" parent="." unique_id=1355055402 instance=ExtResource("5_fo5ed")]
 position = Vector2(282, 196)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1400000001]
+
+[node name="UI" parent="HUD" unique_id=1400000002 instance=ExtResource("6_ui")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="BackgroundMusic" parent="." unique_id=2094942708 instance=ExtResource("7_o06y3")]
