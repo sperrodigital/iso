@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED := 50.0
+const SPEED := 60.0
 
 # Maps 45° movement sector (0=E, 1=SE, 2=S, 3=SW, 4=W, 5=NW, 6=N, 7=NE) → animation name
 const SECTOR_TO_ANIM := [

@@ -3,7 +3,8 @@ IsoScape
 Systems:
 ---------
 - Inventory
-  -
+  - Limit to 8 slots
+  - Drag and Drop functionality.
 
 
 
@@ -30,13 +31,8 @@ Ideas
   - Night time, should be hard to see?
 
 - Pick Ups
-  - stone
-  - wood
   - cloth
   - berries
-
-- Inventory
-  -
 
 - Crafting
   - Crafting Table

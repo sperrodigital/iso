@@ -230,10 +230,11 @@ animations = [{
 "speed": 4.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=715162232]
+[node name="Player" type="CharacterBody2D" unique_id=715162232 groups=["player"]]
 script = ExtResource("2_player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=244685737]
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_player")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1262465778]
@@ -243,3 +244,4 @@ sprite_frames = SubResource("SpriteFrames_8flut")
 animation = &"walk_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=960084169]
+zoom = Vector2(1.25, 1.25)

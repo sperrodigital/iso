@@ -9,9 +9,11 @@
 stream = ExtResource("1_46iy7")
 volume_db = -9.123
 autoplay = true
+bus = &"Music"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1637270804]
 stream = ExtResource("2_dtk78")
 volume_db = -20.845
 autoplay = true
+bus = &"Music"
 parameters/looping = true
