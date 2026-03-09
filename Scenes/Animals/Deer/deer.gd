@@ -11,7 +11,7 @@ const WANDER_TIME_MAX := 3.0
 enum State { IDLE, WANDER }
 var state := State.IDLE
 var wander_direction := Vector2.ZERO
-var timer := 0.0
+var timer := 15.0
 
 func _ready() -> void:
 	_enter_idle()
@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 				_enter_wander()
 		State.WANDER:
 			velocity = wander_direction * SPEED
-			move_and_slide()
+			#move_and_slide()
 			if timer <= 0.0:
 				_enter_idle()
 

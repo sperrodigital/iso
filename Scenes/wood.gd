@@ -7,5 +7,5 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		Inventory.add_item(item_name)
+		#Inventory.add_item(item_name)
 		queue_free()
