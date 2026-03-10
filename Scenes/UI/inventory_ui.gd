@@ -5,7 +5,6 @@ extends CanvasLayer
 
 func _ready():
 	Inventory.inventory_updated.connect(_refresh)
-	hide()
 
 func _input(event):
 	if event.is_action_pressed("toggle_inventory"):
@@ -18,5 +17,5 @@ func _refresh():
 		var count = Inventory.items[item_name]["count"]
 		var label = Label.new()
 		label.text = item_name + " x" + str(count)
-		label.add_theme_font_size_override("font_size", 8)
+		label.add_theme_font_size_override("font_size", 10)
 		items_container.add_child(label)

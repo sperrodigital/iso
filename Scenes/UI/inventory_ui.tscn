@@ -8,19 +8,19 @@ script = ExtResource("1_p83af")
 [node name="Panel" type="Panel" parent="." unique_id=288828464]
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 72.0
-offset_bottom = 78.0
+offset_right = 108.0
+offset_bottom = 162.10811
 
 [node name="Label" type="Label" parent="Panel" unique_id=1225903826]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -14.5
-offset_right = 14.5
-offset_bottom = 15.0
+offset_left = -28.0
+offset_right = 28.0
+offset_bottom = 17.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 11
 text = "Inventory"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1541774743]
@@ -30,9 +30,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -31.5
-offset_top = -59.0
-offset_right = 31.5
-offset_bottom = -2.0
+offset_left = -40.0
+offset_top = -122.10811
+offset_right = 40.0
+offset_bottom = -8.619736
 grow_horizontal = 2
 grow_vertical = 0

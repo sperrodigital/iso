@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 				_enter_wander()
 		State.WANDER:
 			velocity = wander_direction * SPEED
-			#move_and_slide()
+			move_and_slide()
 			if timer <= 0.0:
 				_enter_idle()
 
@@ -36,6 +36,7 @@ func _enter_idle() -> void:
 	sprite.play("idle")
 
 func _enter_wander() -> void:
+	return
 	state = State.WANDER
 	timer = randf_range(WANDER_TIME_MIN, WANDER_TIME_MAX)
 	wander_direction = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)).normalized()

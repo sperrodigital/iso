@@ -3,10 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bojvqiih6r42g" path="res://Assets/Player/sprite.png" id="1_rpqav"]
 [ext_resource type="Script" uid="uid://deunbw5eqkwmm" path="res://Scripts/Player.gd" id="2_player"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_player"]
-radius = 4.0
-height = 8.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8flut"]
 atlas = ExtResource("1_rpqav")
 region = Rect2(64, 24, 16, 24)
@@ -230,18 +226,21 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_player"]
+radius = 4.0
+height = 16.0
+
 [node name="Player" type="CharacterBody2D" unique_id=715162232 groups=["player"]]
 script = ExtResource("2_player")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=244685737]
-position = Vector2(0, -3)
-shape = SubResource("CapsuleShape2D_player")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1262465778]
-position = Vector2(5.9604645e-08, -9)
-scale = Vector2(0.875, 0.875)
+position = Vector2(1, -11)
+scale = Vector2(1.125, 1.125)
 sprite_frames = SubResource("SpriteFrames_8flut")
 animation = &"walk_down"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=244685737]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_player")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=960084169]
-zoom = Vector2(1.25, 1.25)

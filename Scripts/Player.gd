@@ -24,12 +24,16 @@ func _physics_process(_delta: float) -> void:
 	)
 
 	if input != Vector2.ZERO:
-		velocity = input.normalized() * SPEED
+		var iso_input := Vector2(input.x * 2.0, input.y)
+		velocity = iso_input.normalized() * SPEED
+
+		# Keep angle from raw input so controls still feel correct
 		var angle := input.angle()
 		var sector := int(round(angle / (PI / 4.0))) % 8
 		if sector < 0:
 			sector += 8
 		sprite.play(SECTOR_TO_ANIM[sector])
+
 	else:
 		velocity = Vector2.ZERO
 		sprite.play("default")

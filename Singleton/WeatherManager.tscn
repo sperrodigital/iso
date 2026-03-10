@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dt6k4pnuxvcvr"]
+
+[ext_resource type="Script" uid="uid://bks3oqmv88qo6" path="res://Singleton/weather_manager.gd" id="1_f3v44"]
+[ext_resource type="Texture2D" uid="uid://dhlxa1i5dvlab" path="res://Assets/Icons/raindrop.png" id="2_1iw16"]
+[ext_resource type="AudioStream" uid="uid://crli5k0xmf8og" path="res://Assets/Music/Sounds/CalmingRain.mp3" id="3_ujt51"]
+[ext_resource type="Texture2D" uid="uid://hbeyqojthecf" path="res://Assets/Icons/rain_splash.png" id="4_1iw16"]
+
+[sub_resource type="Curve" id="Curve_f3v44"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.39094654, 0.19101131), 0.20477521, 0.20477521, 0, 0, Vector2(0.73662555, 0.19101131), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_5v1tr"]
+curve = SubResource("Curve_f3v44")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ujt51"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1000, 1, 1)
+direction = Vector3(-0.4, 1, 0)
+spread = 0.0
+initial_velocity_min = 455.36
+initial_velocity_max = 499.61
+gravity = Vector3(0, 9.2, 0)
+scale_min = 0.0
+scale_max = 0.5
+alpha_curve = SubResource("CurveTexture_5v1tr")
+sub_emitter_mode = 2
+sub_emitter_amount_at_end = 1
+
+[sub_resource type="Curve" id="Curve_1iw16"]
+_data = [Vector2(0, 0.20081973), 0.0, 0.0, 0, 0, Vector2(0.2633745, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7r3a4"]
+curve = SubResource("Curve_1iw16")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7r3a4"]
+particle_flag_disable_z = true
+scale_min = 0.5
+scale_max = 0.5
+alpha_curve = SubResource("CurveTexture_7r3a4")
+
+[node name="WeatherManager" type="Node2D" unique_id=2135724546]
+script = ExtResource("1_f3v44")
+
+[node name="RainDrops" type="GPUParticles2D" parent="." unique_id=827834445]
+z_index = 1
+texture_filter = 1
+amount = 750
+sub_emitter = NodePath("../RainSplash")
+texture = ExtResource("2_1iw16")
+lifetime = 2.0
+randomness = 1.0
+visibility_rect = Rect2(-500, -200, 1000, 400)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_ujt51")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1188569848]
+stream = ExtResource("3_ujt51")
+volume_db = 3.23
+bus = &"Sounds Effects"
+
+[node name="RainSplash" type="GPUParticles2D" parent="." unique_id=1102144404]
+z_index = 1
+texture_filter = 1
+emitting = false
+amount = 1000
+texture = ExtResource("4_1iw16")
+one_shot = true
+preprocess = 0.1
+explosiveness = 0.05
+process_material = SubResource("ParticleProcessMaterial_7r3a4")
