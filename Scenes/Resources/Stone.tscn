@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://q8olr1ms266s" path="res://Scenes/Resources/stone.gd" id="1_quj7p"]
 [ext_resource type="Texture2D" uid="uid://bmekpoed1l3n" path="res://Tileset/spritesheet.png" id="2_ecwbw"]
+[ext_resource type="Texture2D" uid="uid://c02hflid4vlin" path="res://Tileset/Split/tile_062.png" id="2_re7fa"]
 [ext_resource type="AudioStream" uid="uid://bnmo5eanb2hif" path="res://Assets/Music/Sounds/PickUp.mp3" id="3_ecwbw"]
 [ext_resource type="Shader" uid="uid://hhg1doveabmh" path="res://Scenes/Resources/Stone.gdshader" id="3_s5vme"]
 
@@ -16,6 +17,7 @@ radius = 7.0
 [node name="Stone_Pickup" type="Area2D" unique_id=810082117]
 z_index = 1
 script = ExtResource("1_quj7p")
+item_icon = ExtResource("2_re7fa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997522513]
 position = Vector2(0, -6)

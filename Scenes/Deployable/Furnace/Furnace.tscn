@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://fj1bg76cuyal"]
+
+[ext_resource type="Texture2D" uid="uid://bm8p35u7ux1eq" path="res://Assets/Deployables/Furnace_off.png" id="1_yv3e3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yv3e3"]
+radius = 17.029387
+
+[node name="Furnace" type="Node2D" unique_id=1376588196]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1999001933]
+z_index = 1
+position = Vector2(1, -22)
+texture = ExtResource("1_yv3e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=671191239]
+position = Vector2(-1, -16)
+shape = SubResource("CircleShape2D_yv3e3")

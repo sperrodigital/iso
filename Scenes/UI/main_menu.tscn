@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cggwsw6e3fno0"]
+
+[ext_resource type="Script" uid="uid://csv21sbeit12o" path="res://Scenes/UI/main_menu.gd" id="1_28flt"]
+[ext_resource type="Script" uid="uid://gtrht3mnhiy3" path="res://Scripts/audio_control.gd" id="2_48xlc"]
+[ext_resource type="AudioStream" uid="uid://buvl60u6rhfvi" path="res://Assets/Music/MenuMusic.mp3" id="3_1ehe0"]
+[ext_resource type="Script" uid="uid://d0mcpptoh0v07" path="res://Scripts/full_screen_control.gd" id="4_ce3w2"]
+
+[node name="MainMenu" type="Control" unique_id=997784752]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+script = ExtResource("1_28flt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1520222738]
+stream = ExtResource("3_1ehe0")
+volume_db = -25.544
+autoplay = true
+bus = &"Music"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1213884724]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.5
+offset_top = -68.0
+offset_right = 77.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1436551518]
+layout_mode = 2
+text = "Start"
+
+[node name="Load" type="Button" parent="VBoxContainer" unique_id=473724789]
+layout_mode = 2
+text = "Load"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=133710722]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=311996278]
+layout_mode = 2
+text = "Quit"
+
+[node name="Settings Menu" type="CanvasLayer" parent="." unique_id=76104461]
+scale = Vector2(0.35, 0.35)
+transform = Transform2D(0.35, 0, 0, 0.35, 0, 0)
+
+[node name="Panel" type="Panel" parent="Settings Menu" unique_id=1135367738]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 252.71426
+offset_top = 89.48088
+offset_right = 529.8572
+offset_bottom = 376.2857
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings Menu/Panel" unique_id=490220740]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -60.0
+offset_right = 127.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Settings Menu/Panel/VBoxContainer" unique_id=574614098]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Settings"
+
+[node name="Game Music" type="Label" parent="Settings Menu/Panel/VBoxContainer" unique_id=1480599322]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Menu Music"
+
+[node name="MusicVolume" type="HSlider" parent="Settings Menu/Panel/VBoxContainer" unique_id=977964162]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("2_48xlc")
+audio_bus_name = "Music"
+
+[node name="FullScreenControl" type="CheckButton" parent="Settings Menu/Panel/VBoxContainer" unique_id=624162133]
+layout_mode = 2
+text = "Full Screen"
+script = ExtResource("4_ce3w2")
+
+[node name="Back" type="Button" parent="Settings Menu/Panel/VBoxContainer" unique_id=1641432168]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="Settings Menu/Panel/VBoxContainer/MusicVolume" to="Settings Menu/Panel/VBoxContainer/MusicVolume" method="_on_value_changed"]
+[connection signal="toggled" from="Settings Menu/Panel/VBoxContainer/FullScreenControl" to="Settings Menu/Panel/VBoxContainer/FullScreenControl" method="_on_toggled"]
+[connection signal="pressed" from="Settings Menu/Panel/VBoxContainer/Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,29 @@
+Started Developing
+
+--- March 5 ---
+
+Learned
+- Isometric tilemaps
+- Player animation
+- Audio Streams
+
+--- March 11 ---
+
+Things I've learned
+- Rain particle system
+- Inventory management
+
+
+It's satisfying seeing the game come together, especially with the addition of the inventory system and a basic way to progress now. The really demoralizing thing is that I can't create my own assets for the game, and finding things I want to add will make it feel clunky and not jive well with the current style.
+
+I tried a bit of pixel art with Piskel Editor, but can't really make anything worthwhile, except for rain which I did make but it's barely noticeable! I think for now I'll just have to use what I can for the core mechanics, while maybe learning how to draw pixel art. I think the main challenge will be drawing isometric style...
+
+I think for now I'm good to keep going, the plan is to add animals that can be harvested. I want to add a chicken, that can be attacked (and that will require combat systme) and then harvested for meat. Maybe eventually cooking, etc. Wow scope is growing really fast.
+
+Need to decide if I want to prioritize:
+- Crafting
+- Cooking
+- Farming
+
+Or maybe just add more particles, like bees flying around, grass moving to make it more immersive.
+

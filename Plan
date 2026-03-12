@@ -1,28 +1,28 @@
 IsoScape
 
+---------
 Systems:
 ---------
-- Inventory
-  - Limit to 8 slots
-  - Drag and Drop functionality.
+
+- Day/Night Cycle
+  - 5 min Day / 2 min Night
+
 
 - Hotbar
 
-
 - Farming (Requires inventory & hotbar)
-  - Farming tools
   - Till Land
-  - Plant Seed
+  - Need seeds resource item
+    - how to get it?
+
+  - water catcher deployable to collect water
+    - watering tool to water crops
   - Water Crop
     - if not too complex, add automated watering (rain catcher or irrigation)
   - Harvest Crop
 
-- Day/Night Cycle
-  - Crops affected and grow at day
-  - 5 min Day / 2 min Night
 
-
-
+---------
 Ideas
 ---------
 - Lighting
@@ -40,15 +40,15 @@ Ideas
   - Tame and ride animals to go faster
 
 
+Done:
+- Map
+- Player
+- Inventory
+
+
 Polish:
 ---------
 - Animate Player Idle
 - Make brush idle animation
 - Weather
   - Rain / Sunny / Storm
-
-
-
-Done:
-- Map
-- Player

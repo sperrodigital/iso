@@ -2,14 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://bmekpoed1l3n" path="res://Tileset/spritesheet.png" id="1_iqlcu"]
 [ext_resource type="Script" uid="uid://drupcdaf2l8x0" path="res://Scenes/Resources/wood.gd" id="1_yuu5d"]
+[ext_resource type="Texture2D" uid="uid://wn418kejed6t" path="res://Tileset/Split/tile_048.png" id="2_a61i1"]
 [ext_resource type="AudioStream" uid="uid://bnmo5eanb2hif" path="res://Assets/Music/Sounds/PickUp.mp3" id="3_5ea8y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yuu5d"]
-radius = 7.0
+radius = 6.0
 
 [node name="Wood_Pickup" type="Area2D" unique_id=810082117]
 z_index = 1
+texture_filter = 1
 script = ExtResource("1_yuu5d")
+item_icon = ExtResource("2_a61i1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997522513]
 position = Vector2(2.842171e-14, -0.99999994)
@@ -19,6 +22,7 @@ region_enabled = true
 region_rect = Rect2(130.05118, 134.10732, 30.674637, 26.755844)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314670738]
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_yuu5d")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1830182036]

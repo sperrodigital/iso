@@ -1,11 +1,11 @@
 # ground_item.gd
 extends Area2D
 
-@export var item_data: Dictionary = {
-	"name": "Stone",
-	"type": "resource",
-	"value": 1
-}
+@export var item_name: String = "Stone"
+@export var item_type: String = "resource"
+@export var item_value: int = 1
+@export var item_icon: Texture2D = null
+
 
 @onready var pickup_sound = $AudioStreamPlayer2D
 
@@ -14,7 +14,13 @@ func _ready():
 
 func _on_body_entered(body: Node):
 	if body.is_in_group("player"):
-		if Inventory.add_item(item_data):
+		if Inventory.add_item({
+			"name": item_name,
+			"type": item_type,
+			"value": item_value,
+			"icon": item_icon,
+
+		}):
 			_play_pickup_sound()
 
 func _play_pickup_sound():

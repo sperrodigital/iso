@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://oqcf26nvy04n"]
+
+[ext_resource type="Script" uid="uid://de0fip4d8lpho" path="res://Singleton/SaveManager/save_manager.gd" id="1_lm31b"]
+
+[node name="SaveManager" type="Node2D" unique_id=1345871742]
+script = ExtResource("1_lm31b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1537437663]
+
+[node name="SaveUI" type="CanvasLayer" parent="CanvasLayer" unique_id=1198687964]
+visible = false
+
+[node name="Panel" type="Panel" parent="CanvasLayer/SaveUI" unique_id=161575340]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveUI/Panel" unique_id=1109632562]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/SaveUI/Panel/VBoxContainer" unique_id=469101535]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/SaveUI/Panel/VBoxContainer" unique_id=1460271826]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="CanvasLayer/SaveUI/Panel/VBoxContainer" unique_id=1804147263]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="CanvasLayer/SaveUI/Panel/VBoxContainer" unique_id=221123691]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="CanvasLayer/SaveUI/Panel/VBoxContainer" unique_id=1927878253]
+layout_mode = 2
+
+[connection signal="game_loaded" from="." to="." method="_on_game_loaded"]

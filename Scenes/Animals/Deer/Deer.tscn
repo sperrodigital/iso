@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3s30hdav1nkm" path="res://Assets/Deer/critter_stag_SE_idle.png" id="1_bf0o5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bf0o5"]
+radius = 7.071068
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1k28f"]
 atlas = ExtResource("1_bf0o5")
@@ -185,7 +186,9 @@ animations = [{
 script = ExtResource("1_1k28f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1930112667]
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_bf0o5")
+debug_color = Color(0, 0.6360605, 0.41347188, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=374297118]
 position = Vector2(3, -18)

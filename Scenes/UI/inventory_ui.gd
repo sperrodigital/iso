@@ -1,10 +1,14 @@
 # inventory_ui.gd
 extends CanvasLayer
 
-@onready var items_container = $Panel/VBoxContainer
+@onready var items_container: GridContainer = $GridContainer
+
+const SlotUI = preload("res://Singleton/Inventory/slot_ui.tscn")
+var slots: Array = []
 
 func _ready():
 	Inventory.inventory_updated.connect(_refresh)
+	_refresh()
 
 func _input(event):
 	if event.is_action_pressed("toggle_inventory"):
@@ -13,9 +17,14 @@ func _input(event):
 func _refresh():
 	for child in items_container.get_children():
 		child.queue_free()
-	for item_name in Inventory.items:
-		var count = Inventory.items[item_name]["count"]
-		var label = Label.new()
-		label.text = item_name + " x" + str(count)
-		label.add_theme_font_size_override("font_size", 10)
-		items_container.add_child(label)
+		
+	for i in Inventory.SLOT_COUNT:
+		var slot = SlotUI.instantiate()
+		slot.slot_index = i
+		items_container.add_child(slot)
+		
+		if Inventory.slots[i] != null:
+			var data = Inventory.slots[i]
+			slot.setup(data["item_name"], data["count"], data.get("icon", null))
+		else:
+			slot.setup("", 0)
