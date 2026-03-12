@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cusmsmblmkjrs" path="res://Scenes/UI/save_menu.gd" id="5_mrfpk"]
 
 [node name="MainMenu" type="Control" unique_id=997784752]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 8
@@ -22,7 +23,6 @@ script = ExtResource("1_28flt")
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1520222738]
 stream = ExtResource("3_1ehe0")
 volume_db = -36.525
-autoplay = true
 bus = &"Music"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1213884724]

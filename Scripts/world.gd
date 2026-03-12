@@ -3,7 +3,6 @@ extends Node2D
 @onready var menu: Control = $CanvasLayer/Menu
 @onready var dim: ColorRect = $CanvasLayer/ColorRect
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	menu.hide()
@@ -21,11 +20,13 @@ func _on_menu_closed():
 
 func _input(event):
 	if event.is_action_pressed("pause"):
+		print("Pausing game...")
 		if menu.visible:
 			menu.hide()
 			dim.hide()
 			get_tree().paused = false
 		else:
+			print("Showing menu")
 			menu.show()
 			dim.show()
 			get_tree().paused = true

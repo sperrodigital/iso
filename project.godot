@@ -25,6 +25,7 @@ SettingsManager="*uid://d1arvqlsbc6ha"
 Inventory="*uid://6oty4usqp4wk"
 WeatherManager="*uid://dt6k4pnuxvcvr"
 SaveManager="*uid://oqcf26nvy04n"
+GameState="*uid://cg1a4teenai8o"
 
 [display]
 

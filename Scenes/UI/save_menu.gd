@@ -33,3 +33,4 @@ func _on_slot_pressed(slot: int):
 		# Store the slot and load after scene change
 		SaveManager.pending_load_slot = slot
 		get_tree().change_scene_to_file("res://Scenes/world.tscn")
+		GameState.set_state(GameState.State.PLAYING)

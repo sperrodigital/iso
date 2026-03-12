@@ -6,6 +6,7 @@ enum Mode { MAIN_MENU, PAUSE }
 enum SaveMode { SAVE, LOAD }
 
 @export var mode: Mode = Mode.MAIN_MENU
+@onready var menu_music: AudioStreamPlayer = $MenuMusic
 
 @onready var main_menu: Control = $"."
 @onready var settings_menu: CanvasLayer = $"Settings Menu"
@@ -18,6 +19,8 @@ enum SaveMode { SAVE, LOAD }
 signal menu_closed
 
 func _ready():
+	if GameState.is_main_menu():
+		menu_music.play()
 	main_menu.visible = true
 	settings_menu.visible = false
 	save_menu.visible = false
@@ -37,6 +40,7 @@ func _on_resume_pressed():
 	get_tree().paused = false
 
 func _on_start_pressed():
+	GameState.set_state(GameState.State.PLAYING)
 	get_tree().change_scene_to_file("res://Scenes/world.tscn")
 
 func _on_save_pressed():
