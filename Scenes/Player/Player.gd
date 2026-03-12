@@ -15,8 +15,6 @@ const SECTOR_TO_ANIM := [
 ]
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var walk_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
-
 
 func _physics_process(_delta: float) -> void:
 	var input := Vector2(

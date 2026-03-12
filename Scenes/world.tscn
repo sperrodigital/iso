@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://7peh1848s0iu" path="res://Tileset/Split/tile_045.png" id="11_7yui6"]
 [ext_resource type="Texture2D" uid="uid://vjbtlkusxdfu" path="res://Tileset/Split/tile_065.png" id="11_ikia7"]
 [ext_resource type="Texture2D" uid="uid://tknrw2wmae4y" path="res://Assets/Resources/Log.png" id="13_c5t2i"]
-[ext_resource type="PackedScene" uid="uid://fj1bg76cuyal" path="res://Scenes/Deployable/Furnace/Furnace.tscn" id="14_e0ngr"]
+[ext_resource type="PackedScene" uid="uid://cggwsw6e3fno0" path="res://Scenes/UI/main_menu.tscn" id="14_kn0ld"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go701"]
 texture = ExtResource("1_a02cp")
@@ -234,9 +234,6 @@ script = ExtResource("1_k7acu")
 z_index = 1
 position = Vector2(263, 171)
 
-[node name="InventoryUI" parent="." unique_id=1884334407 instance=ExtResource("7_o06y3")]
-visible = false
-
 [node name="Decoration" type="TileMapLayer" parent="." unique_id=224276805]
 z_index = 1
 y_sort_enabled = true
@@ -318,5 +315,21 @@ item_amount = 3
 respawn_time = 30
 item_texture = ExtResource("13_c5t2i")
 
-[node name="Furnace" parent="." unique_id=1376588196 instance=ExtResource("14_e0ngr")]
-position = Vector2(330, 165)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=355379020]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1258020011]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.23529412)
+
+[node name="Menu" parent="CanvasLayer" unique_id=997784752 instance=ExtResource("14_kn0ld")]
+process_mode = 3
+mode = 1
+
+[node name="InventoryUI" parent="." unique_id=1884334407 instance=ExtResource("7_o06y3")]
+visible = false
