@@ -21,6 +21,7 @@ func _on_menu_closed():
 func _input(event):
 	if event.is_action_pressed("pause"):
 		print("Pausing game...")
+		GameState.set_state(GameState.State.PAUSED)
 		if menu.visible:
 			menu.hide()
 			dim.hide()
