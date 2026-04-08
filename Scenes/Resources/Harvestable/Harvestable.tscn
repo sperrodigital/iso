@@ -12,7 +12,7 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c4ar4"]
-radius = 17.691809
+radius = 30.000006
 
 [node name="Harvestable" type="Node2D" unique_id=1253278786]
 script = ExtResource("1_sx7t1")

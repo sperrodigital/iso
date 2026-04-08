@@ -6,7 +6,7 @@ extends Node2D
 @onready var timer: Timer = $Timer
 
 const CROP_STAGES = [
-	Vector2i(4,2), # Stage 0 - Just Planted
+	Vector2i(0,0), # Stage 0 - Just Planted
 	Vector2i(2,2), # Stage 1 - Sprouting
 	Vector2i(6,2), # Stage 2 - Growing
 	Vector2i(2,3), # Ready to harvest
@@ -41,6 +41,11 @@ func _on_growth_tick() -> void:
 		print("grew to stage: ", next_stage)
 
 func _process(_delta: float) -> void:
+	if GameState.is_interacting:
+		print("Player state: ", GameState.is_interacting)
+		visible = false
+		return
+	
 	var mouse_pos = get_global_mouse_position()
 	var local_pos = ground.to_local(mouse_pos)
 	hovered_tile = ground.local_to_map(local_pos)
@@ -64,11 +69,16 @@ func _draw() -> void:
 	draw_polyline(points + PackedVector2Array([points[0]]), Color(1, 1, 1, 0.8), 1.0)
 
 func _input(event: InputEvent) -> void:
-	
+			
 	# When left click is pressed
 	if event is InputEventMouseButton \
 	and event.button_index == MOUSE_BUTTON_LEFT \
 	and event.pressed:
+		if GameState.is_interacting:
+			print("Checking player state on _input: ", GameState.is_interacting)
+			return
+
+	
 		var tile_world_pos = ground.to_global(ground.map_to_local(hovered_tile))
 		var distance = player.global_position.distance_to(tile_world_pos)
 		
@@ -82,7 +92,7 @@ func _input(event: InputEvent) -> void:
 				_harvest_crop(hovered_tile)
 			return
 			
-		ground.set_cell(hovered_tile, 0, Vector2i(3,2))
+		ground.set_cell(hovered_tile, 0, Vector2i(0,0))
 		farm_data[hovered_tile] = { "state": "tilled" }
 
 	# When right click is pressed

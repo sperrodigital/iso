@@ -2,12 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://c70dtdepsck4f" path="res://Assets/Deployables/furnace.png" id="1_f7c01"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uh8f"]
+atlas = ExtResource("1_f7c01")
+region = Rect2(64, 0, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7c01"]
 atlas = ExtResource("1_f7c01")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5uh8f"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uh8f")
+}],
+"loop": true,
+"name": &"ON",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f7c01")
@@ -26,10 +38,11 @@ size = Vector2(26.5, 12)
 region_enabled = true
 region_rect = Rect2(0, 0, 63, 64)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1542430796]
+[node name="ON" type="AnimatedSprite2D" parent="." unique_id=1542430796]
 position = Vector2(0, -19)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_5uh8f")
+animation = &"ON"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1475589937]
 z_index = 1

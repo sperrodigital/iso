@@ -39,11 +39,16 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
+		print("Setting player state")
+		GameState.is_interacting = true
+		print ("Player state: ", GameState.is_interacting)
 		player_nearby = true
 		_update_outline()
 
 func _on_body_exited(body: Node) -> void:
 	if body.is_in_group("player"):
+		print("Setting player interacting false")
+		GameState.is_interacting = false
 		player_nearby = false
 		_update_outline()
 

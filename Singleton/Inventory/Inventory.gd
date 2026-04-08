@@ -2,7 +2,7 @@
 extends Node
 
 const ITEM_DATABASE = {
-	"Stone": "res://Tileset/Split/tile_06Wheat7.png",
+	"Stone": "res://Tileset/Split/tile_067.png",
 	"Wood": "res://Tileset/Split/tile_048.png",
 	"Cloth": "res://Tileset/Split/tile_045.png",
 	"wheat": "res://Assets/Resources/Wheat.png"

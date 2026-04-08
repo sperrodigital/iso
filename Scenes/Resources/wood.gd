@@ -14,7 +14,6 @@ func _ready():
 
 func _on_body_entered(body: Node):
 	if body.is_in_group("player"):
-		print("player getting wood...")
 		if Inventory.add_item({
 			"name": item_name,
 			"type": item_type,

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bc5rtkimvkjd5"]
+
+[ext_resource type="Script" uid="uid://blygy2fs0a28t" path="res://Scenes/prodecural_world.gd" id="1_6obhg"]
+[ext_resource type="Texture2D" uid="uid://cbreoij25n7i8" path="res://Tileset/Sprite-0004.png" id="1_jos0p"]
+[ext_resource type="PackedScene" uid="uid://6csra8gnbqcy" path="res://Scenes/Player/Player.tscn" id="3_ulgci"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6obhg"]
+texture = ExtResource("1_jos0p")
+4:6/size_in_atlas = Vector2i(2, 2)
+4:6/0 = 0
+4:6/0/texture_origin = Vector2i(0, -8)
+6:6/size_in_atlas = Vector2i(2, 2)
+6:6/animation_columns = 3
+6:6/animation_speed = 1.5
+6:6/animation_frame_0/duration = 3.0
+6:6/animation_frame_1/duration = 3.0
+6:6/0 = 0
+6:6/0/texture_origin = Vector2i(0, -8)
+
+[sub_resource type="TileSet" id="TileSet_ulgci"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
+sources/1 = SubResource("TileSetAtlasSource_6obhg")
+
+[node name="Prodecural World" type="Node2D" unique_id=219253336]
+script = ExtResource("1_6obhg")
+
+[node name="Player" parent="." unique_id=715162232 instance=ExtResource("3_ulgci")]
+z_index = 1
+position = Vector2(2, 3)
+
+[node name="MapLayer" type="TileMapLayer" parent="." unique_id=62299329]
+y_sort_enabled = true
+position = Vector2(-2, 4)
+tile_set = SubResource("TileSet_ulgci")

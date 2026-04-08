@@ -1,30 +1,60 @@
-IsoScape
 
----------
-Systems:
----------
+[ Game_Name_Goes_Here ]
+
+
+Concept:
+
+Survival, base-building, loot collecting....?
+
+Mix of LDOE, and Rust.
+
+During the daytime, player can loot, gather resources, and build up the base.
+
+At night, it's dangerous to go out. Wolves and Badgers roam and can attack the player, break down the base
+and destroy player made deployables.
+
+
+Progression:
+
+- Improve base
+  - Upgrade walls for more HP
+
+- Fortifications
+  - Turrets
+  - Traps
+
+-------
+Work on:
+-------
+
+- Hotbar
+  - equiping active item
+  - secondary items
+
+- New assets
+  - tilemap
+  - trees
+  - stone / ore
+  - cloth
+
+
+
+------------
+Nice-to-have:
+------------
 
 - Day/Night Cycle
   - 5 min Day / 2 min Night
 
 
-- Hotbar
-
-- Farming (Requires inventory & hotbar)
-  - Till Land
-  - Need seeds resource item
-    - how to get it?
-
-  - water catcher deployable to collect water
-    - watering tool to water crops
-  - Water Crop
-    - if not too complex, add automated watering (rain catcher or irrigation)
-  - Harvest Crop
-
-
----------
+-----
 Ideas
----------
+-----
+
+- Fishing
+  - fish traps - have percentage chance to catch basic fish
+    - allow placing bait for better fish catch
+
 - Lighting
   - Night time, should be hard to see?
 
@@ -36,21 +66,42 @@ Ideas
   - Basic Crafting Menu
   - Crafting Table - let's do th is for advanced items
 
+- Terraforming
+  - learn recipe, get ingredients with shovel and make new islans
+    - Concept is to let the player build their own base where they find a nice location
+      on the map (needs to be procedural)
+    - this should be behind some kind of skill that needs to be reached, as well as items crafted in order to do this.
+
 - Animals
   - Tame and ride animals to go faster
     - Wolf may approach to attack, make some way to befriend it by throwing meat down for it
       it would stay a bit then run away, evenaually building up trust
 
+- Exploring Islands
+  - craft telescop/binoculars to be able to see further and see if there is anything on islands that can't be reached.
 
-Done:
+
+--------------
+Done/Follow-up
+--------------
 - Map
 - Player
 - Inventory
+- Farming
+  - Tilling land
+  - Planting seed
+  - harvesting crop
 
 
 Polish:
 ---------
-- Animate Player Idle
-- Make brush idle animation
 - Weather
   - Rain / Sunny / Storm
+
+- Farming
+  - Need a seeds resource item (think on how to find it)
+  - Water catcher deployable to collect water
+  - watering tool to water crops
+  - Water Crop
+    - if not too complex, add automated watering (rain catcher or irrigation)
+

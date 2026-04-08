@@ -1,8 +1,8 @@
 extends Node
 
 # How often (in seconds) weather can change
-@export var min_interval := 300.0
-@export var max_interval := 600.0
+@export var min_interval := 15.0
+@export var max_interval := 30.0
 
 # Weights for how likely each weather type is (must match Weather enum order)
 # CLEAR, RAIN, STORM, SNOW

@@ -2,6 +2,8 @@ extends Node
 
 enum State { MAIN_MENU, PLAYING, PAUSED }
 
+# Player state
+var is_interacting := false
 var current_state: State = State.MAIN_MENU
 
 func is_playing() -> bool:
